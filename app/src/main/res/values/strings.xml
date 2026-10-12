@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Resqueue</string>
+
+
+    <string name="Yes">Yes</string>
+    <string name="yes">yes</string>
+    <string name="No">No</string>
+    <string name="no">no</string>
+
+    <string name="not_altered">*Not Altered*</string>
+    <string name="altered">Altered</string>
+    <string name="alter_unknown">*Alteration Unknown*</string>
+    <string name="has_done_well">Has done well</string>
+
+    //Home Cards
+    <string name="new_intake">New Intake</string>
+    <string name="new_live_outcome">New Live Outcome</string>
+    <string name="in_custody_animal_list">In Custody Animal List</string>
+
+    //Nav Drawer
+    <string name="home">Home</string>
+    <string name="in_custody">In Custody</string>
+    <string name="settings">Settings</string>
+
+
+    <!-- Years Plurals -->
+    <plurals name="age_years">
+        <item quantity="one">%d year</item>
+        <item quantity="other">%d years</item>
+    </plurals>
+
+    <!-- Months Plurals -->
+    <plurals name="age_months">
+        <item quantity="one">%d month</item>
+        <item quantity="other">%d months</item>
+    </plurals>
+
+    <!-- Days in Rescue Plurals -->
+    <plurals name="days_in_rescue">
+        <item quantity="one">%1$d day</item>
+        <item quantity="other">%1$d days</item>
+    </plurals>
+
+    <string name="animal_detail">Animal Detail</string>
+</resources>
