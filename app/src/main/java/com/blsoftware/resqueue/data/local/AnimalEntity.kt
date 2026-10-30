@@ -2,6 +2,7 @@ package com.blsoftware.resqueue.data.local
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.blsoftware.resqueue.data.AgeCategory
 import com.blsoftware.resqueue.data.AlteredStatus
 
 
@@ -13,6 +14,7 @@ data class AnimalEntity(
     val gender: String,
     val altered: AlteredStatus,
     val age: Int,
+    val ageCategory: AgeCategory,
     val coverPhotoUrl: String?,
     val status: String,
     val currentLocationOrFoster: String,

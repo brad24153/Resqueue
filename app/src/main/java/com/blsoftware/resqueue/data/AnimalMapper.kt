@@ -6,14 +6,6 @@ import com.blsoftware.resqueue.data.local.AnimalEntity
 import com.blsoftware.resqueue.data.remote.ShelterluvAnimalDto
 import java.util.concurrent.TimeUnit
 
-/* COVERAGE-START */
-/**
- * AUTO-GENERATED COVERAGE METRICS (2026-10-11)
- * - Line Coverage:   37 / 37 (100%)
- * - Branch Coverage: 44 / 44 (100%)
- */
-/* COVERAGE-END */
-
 
 fun ShelterluvAnimalDto.toEntity(): AnimalEntity {
     return AnimalEntity(
@@ -21,6 +13,7 @@ fun ShelterluvAnimalDto.toEntity(): AnimalEntity {
         name = this.name ?: "Unknown",
         breed = this.breed ?: "Unknown",
         age = this.age ?: 1200,
+        ageCategory = AgeCategory.fromMonths(this.age),
         gender = this.gender ?: "Unknown",
         altered = AlteredStatus.fromString(altered),
         coverPhotoUrl = this.coverPhotoUrl,
@@ -32,23 +25,6 @@ fun ShelterluvAnimalDto.toEntity(): AnimalEntity {
         ),
         daysInRescue = parseDaysInRescue(lastIntakeUnixTime)
     )
-}
-
-enum class AlteredStatus(@StringRes val labelResId: Int) {
-    YES(R.string.altered),
-    NO(R.string.not_altered),
-    UNKNOWN(R.string.alter_unknown);
-
-    companion object {
-        fun fromString(value: String?): AlteredStatus {
-            if (value == null) return UNKNOWN
-            return when (value.trim().lowercase()) {
-                "yes" -> YES
-                "no" -> NO
-                else -> UNKNOWN
-            }
-        }
-    }
 }
 
 fun parseLocationOrFoster(

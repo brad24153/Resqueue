@@ -1,16 +1,8 @@
 package com.blsoftware.resqueue.data.remote
 
-import com.google.gson.annotations.SerializedName
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
-/* COVERAGE-START */
-/**
- * AUTO-GENERATED COVERAGE METRICS (2026-10-11)
- * - Line Coverage:   25 / 27 (92%)
- * - Branch Coverage: 0 / 0 (100%)
- */
-/* COVERAGE-END */
 
 @Serializable
 data class ShelterluvAnimalDto(
@@ -31,7 +23,7 @@ data class ShelterluvAnimalDto(
 
 @Serializable
 data class ShelterluvResponse(
-    @SerializedName("animals") val animals: List<ShelterluvAnimalDto> = emptyList()
+    @SerialName("animals") val animals: List<ShelterluvAnimalDto> = emptyList()
 )
 
 @Serializable

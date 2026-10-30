@@ -1,6 +1,7 @@
 package com.blsoftware.resqueue.data.remote
 
-import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 import retrofit2.http.GET
 import retrofit2.http.Query
 
@@ -12,6 +13,7 @@ interface ShelterluvApi {
     ): ShelterluvResponseDto
 }
 
+@Serializable
 data class ShelterluvResponseDto(
-    @SerializedName("animals") val animals: List<ShelterluvAnimalDto>
+    @SerialName("animals") val animals: List<ShelterluvAnimalDto>
 )
