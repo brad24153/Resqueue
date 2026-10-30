@@ -9,10 +9,11 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import com.blsoftware.resqueue.data.remote.ShelterluvApi
 import com.blsoftware.resqueue.BuildConfig
+import kotlinx.serialization.json.Json
+import okhttp3.MediaType.Companion.toMediaType
 import retrofit2.Retrofit
 import javax.inject.Singleton
-import kotlin.jvm.java
-import retrofit2.converter.gson.GsonConverterFactory
+import retrofit2.converter.kotlinx.serialization.asConverterFactory
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -29,8 +30,8 @@ object NetworkModule {
             val requestWithHeader = originalRequest.newBuilder()
                 .header(
                     "Authorization",
-                    "Bearer ${BuildConfig.SHELTERLUV_API_KEY}"
-                ) // Replace "x-api-key" with key name required by your API docs
+                    "Bearer $API_KEY"
+                )
                 .build()
             chain.proceed(requestWithHeader)
         }
@@ -45,13 +46,23 @@ object NetworkModule {
             .build()
     }
 
+
     @Provides
     @Singleton
-    fun provideShelterluvApi(okHttpClient: OkHttpClient): ShelterluvApi {
+    fun provideJson(): Json = Json {
+        ignoreUnknownKeys = true
+        coerceInputValues = true
+        isLenient = true
+    }
+
+
+    @Provides
+    @Singleton
+    fun provideShelterluvApi(okHttpClient: OkHttpClient, json: Json): ShelterluvApi {
         return Retrofit.Builder()
             .baseUrl("https://new.shelterluv.com/api/v1/")
             .client(okHttpClient)
-            .addConverterFactory(GsonConverterFactory.create())
+            .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
             .build()
             .create(ShelterluvApi::class.java)
     }
