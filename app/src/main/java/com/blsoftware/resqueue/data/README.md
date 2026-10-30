@@ -181,6 +181,7 @@ class AnimalListViewModel @Inject constructor(
 
 | File Name        |                                Line Coverage                                |                            Instruction Coverage                             |
 |:-----------------|:---------------------------------------------------------------------------:|:---------------------------------------------------------------------------:|
+| AgeCategory      | 10/10 ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen) | 68/68 ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen) |
 | AlteredStatus    |  9/9 ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen)  | 68/68 ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen) |
 | AnimalMapper     | 37/37 ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen) | 44/44 ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen) |
 | AnimalRepository | 11/11 ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen) | 93/93 ![Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen) |
