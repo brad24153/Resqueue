@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import com.blsoftware.resqueue.R
 import com.blsoftware.resqueue.data.local.AnimalEntity
 import coil3.compose.AsyncImage
+import com.blsoftware.resqueue.data.AgeCategory
 import com.blsoftware.resqueue.data.AlteredStatus
 import com.blsoftware.resqueue.ui.components.AnimalAgeText
 import com.blsoftware.resqueue.ui.theme.ResqueueTheme
@@ -80,6 +81,7 @@ fun AnimalListItem(
             Spacer(modifier = Modifier.width(16.dp))
 
             Column(
+                modifier = Modifier.weight(1f),
                 verticalArrangement = Arrangement.Center
             ) {
                 //Name - Gender - Age
@@ -174,6 +176,7 @@ fun AnimalListItemPreview(modifier: Modifier = Modifier) {
                 altered = AlteredStatus.UNKNOWN,
                 gender = "Male",
                 age = 4,
+                ageCategory = AgeCategory.PUPPY,
                 coverPhotoUrl = "https://example.com/beagle.jpg",
                 currentLocationOrFoster = "Location: The Rescue Ranch",
                 daysInRescue = 43
