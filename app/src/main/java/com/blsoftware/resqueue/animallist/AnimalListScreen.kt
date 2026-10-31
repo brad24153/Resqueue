@@ -63,9 +63,6 @@ import com.blsoftware.resqueue.data.AgeCategory
 import com.blsoftware.resqueue.data.AlteredStatus
 
 
-//TODO confirm pushes show correct user then delete this comment
-
-
 // Stateful screen
 @Composable
 fun AnimalListScreen(
