@@ -63,7 +63,7 @@ import com.blsoftware.resqueue.data.AgeCategory
 import com.blsoftware.resqueue.data.AlteredStatus
 
 
-//TODO delete this comment after confirming correct account linkage with GH
+//TODO confirm pushes show correct user then delete this comment
 
 
 // Stateful screen
