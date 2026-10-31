@@ -21,6 +21,7 @@
     <string name="home">Home</string>
     <string name="in_custody">In Custody</string>
     <string name="settings">Settings</string>
+    <string name="nav_back">Navigate Back</string>
 
 
     <!-- Years Plurals -->
@@ -40,6 +41,38 @@
         <item quantity="one">%1$d day</item>
         <item quantity="other">%1$d days</item>
     </plurals>
+
+    <string name="animal_list_retry">Retry</string>
+
+    <plurals name="animal_count_found">
+        <item quantity="one">%1$d animal found</item>
+        <item quantity="other">%1$d animals found</item>
+    </plurals>
+
+    <string name="animal_list_search_placeholder">Search animals…</string>
+    <string name="clear_search">Clear search</string>
+    <string name="animal_list_no_animals_match_filters">No animals match active filters.</string>
+    <string name="animal_list_no_animals_available">No animals available..</string>
+    <string name="animal_list_sort_by">Sort by</string>
+    <string name="animal_list_sort_by_name">Name</string>
+    <string name="animal_list_sort_by_age">Age</string>
+    <string name="animal_list_sort_by_days_in_rescue">Days in Rescue</string>
+    <string name="animal_list_sort_order">Sort Order</string>"
+    <string name="animal_list_sort_direction_ascending">Ascending</string>
+    <string name="animal_list_sort_direction_descending">Descending</string>
+    <string name="animal_list_filter_animals">Filter Animals</string>
+    <string name="animal_list_filter_options">Filter Options</string>
+    <string name="animal_list_filter_gender">Gender</string>
+    <string name="animal_list_filter_age_group">Age Group</string>
+    <string name="animal_list_filter_altered_status">Altered Status</string>
+    <string name="animal_list_selected">Selected</string>
+    <string name="animal_list_filter_reset">Reset</string>
+    <string name="animal_list_filter_apply">Apply</string>
+    <string name="animal_list_filter_gender_male">Male</string>
+    <string name="animal_list_filter_gender_female">Female</string>
+
+
+
 
     <string name="animal_detail">Animal Detail</string>
 </resources>
