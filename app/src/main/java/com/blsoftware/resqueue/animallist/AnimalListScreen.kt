@@ -62,6 +62,10 @@ import com.blsoftware.resqueue.R
 import com.blsoftware.resqueue.data.AgeCategory
 import com.blsoftware.resqueue.data.AlteredStatus
 
+
+//TODO delete this comment after confirming correct account linkage with GH
+
+
 // Stateful screen
 @Composable
 fun AnimalListScreen(
